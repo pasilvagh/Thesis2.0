@@ -1,0 +1,20 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducci\'on}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Contexto}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Motivaci\'on para estudiar el Browser}{4}{0}{1}
+\beamer@sectionintoc {2}{El Problema}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Amenazas y Vulnerabilidades}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Problemas}{6}{0}{2}
+\beamer@sectionintoc {3}{Marco Te\IeC {\'o}rico}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Arquitectura de Referencia (AR)}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{Arquitectura de Referencia de Seguridad (ARS)}{8}{0}{3}
+\beamer@subsectionintoc {3}{3}{Patrones del Mal Uso}{9}{0}{3}
+\beamer@subsectionintoc {3}{4}{Estado del Arte}{10}{0}{3}
+\beamer@sectionintoc {4}{Propuesta}{11}{0}{4}
+\beamer@subsectionintoc {4}{1}{Objetivo General y Espec\IeC {\'\i }ficos}{11}{0}{4}
+\beamer@subsectionintoc {4}{2}{Hip\IeC {\'o}tesis}{12}{0}{4}
+\beamer@subsectionintoc {4}{3}{Formas de Validaci\IeC {\'o}n}{13}{0}{4}
+\beamer@subsectionintoc {4}{4}{Trabajo Adelantado}{14}{0}{4}
+\beamer@sectionintoc {5}{Metodolog\IeC {\'\i }a y Plan de Trabajo}{15}{0}{5}
+\beamer@sectionintoc {6}{Aportes y Resultados Esperados}{16}{0}{6}

@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: diaposMemoria.aux
+The top-level auxiliary file: diaposPresentSemI_wtrans.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -11,49 +11,48 @@ Database file #1: refTodas.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty booktitle in WhyteHarrison
-Warning--empty year in WhyteHarrison
+Warning--empty booktitle in 2005-grosskurth-browser-refarch
 
 Done.
-You've used 10 entries,
+You've used 6 entries,
             4039 wiz_defined-function locations,
-            859 strings with 8853 characters,
-and the built_in function-call counts, 3902 in all, are:
-= -- 260
-> -- 52
-< -- 9
-+ -- 29
-- -- 9
-* -- 167
-:= -- 641
-add.period$ -- 22
-call.type$ -- 10
-change.case$ -- 10
-chr.to.int$ -- 24
-cite$ -- 12
-duplicate$ -- 326
-empty$ -- 416
-format.name$ -- 12
-if$ -- 843
+            846 strings with 8349 characters,
+and the built_in function-call counts, 3764 in all, are:
+= -- 291
+> -- 74
+< -- 24
++ -- 40
+- -- 12
+* -- 179
+:= -- 590
+add.period$ -- 12
+call.type$ -- 6
+change.case$ -- 8
+chr.to.int$ -- 63
+cite$ -- 7
+duplicate$ -- 276
+empty$ -- 324
+format.name$ -- 17
+if$ -- 840
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 67
-newline$ -- 67
-num.names$ -- 5
-pop$ -- 234
+int.to.str$ -- 6
+missing$ -- 49
+newline$ -- 45
+num.names$ -- 6
+pop$ -- 137
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 291
+skip$ -- 286
 stack$ -- 0
-substring$ -- 67
-swap$ -- 172
-text.length$ -- 1
+substring$ -- 157
+swap$ -- 196
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 10
-warning$ -- 2
-while$ -- 9
-width$ -- 12
-write$ -- 105
-(There were 2 warnings)
+type$ -- 6
+warning$ -- 1
+while$ -- 17
+width$ -- 7
+write$ -- 77
+(There was 1 warning)
