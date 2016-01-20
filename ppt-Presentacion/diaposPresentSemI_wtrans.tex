@@ -100,13 +100,13 @@
 		\item Nuevas formas de interactuar.
 		\item Disminuir los costos de construir un programa Cliente (desde cero) para
 el usuario del sistema.
-		\item Seguridad (la que est\'a implementada en los Web Browser es bastante buena).
+		\item Seguridad, la que est\'a implementada en los Web Browser es bastante buena.
 		\item Es una herramienta indispensable, por lo tanto el reuso es lógico.
 	\end{itemize}
 	
-	\begin{block}{Las preocupaciones principales}
+	\begin{block}<2->{Las preocupaciones principales}
 	\begin{itemize}
-		\item Los sistemas, a los que un usuario hace referencia, son llamados desde un Web Browser.
+		\item Los sistemas a los que un usuario hace referencia, y son llamados desde un Web Browser.
 		\item Los stakeholders afectados: el usuario del Browser, el Host del usuario y hasta el Servicio externo usado.
 	\end{itemize}
 	\end{block}
@@ -134,6 +134,7 @@ el usuario del sistema.
 	  \item Instalaci\'on de Malware o extensiones maliciosas.
 	  \item Extensiones Vulnerables.
 	  \item Man in the Browser.
+	  \item Inyección de código.
 	  \end{enumerate}
 	\end{minipage}
 	\begin{minipage}[c][0.4\textheight][c]{\linewidth}
@@ -147,8 +148,8 @@ el usuario del sistema.
 \begin{frame}
 	\frametitle{Problemas}
 	\begin{itemize}
-		\item Falta de conocimientos de seguridad con respecto al Browser, podr\'ia afectar de forma directa el desarrollo de aplicaciones que lo utilizan y Stakeholders. 
-		\item Poca documentaci\'on y no hay conceptos unificados. No se ve que existan descripciones formales para los conceptos relacionados al browser.
+		\item<1-> Falta de conocimientos de seguridad con respecto al Browser, podr\'ia afectar de forma directa el desarrollo de aplicaciones que lo utilizan y Stakeholders. 
+		\item<2-> Poca documentaci\'on y no hay conceptos unificados. No se ve que existan descripciones formales para los conceptos relacionados al browser.
 	\end{itemize}
 \end{frame}
 
@@ -157,15 +158,15 @@ el usuario del sistema.
 \begin{frame}
 	\frametitle{Arquitectura de Referencia (AR) para el browser}
 		\begin{itemize}
-			\item Actualmente no hay un consenso de cómo definir una AR, lo que debería contener y cómo debería de construirse. En este trabajo usaremos patrones arquitecturales para su construcción.
-			\item Especifica la decomposici\'on del sistema en subsistemas, las interacciones entre estas partes y la distribuci\'on de funcionalidad entre ellas.
-			\item Describir los Stakeholders que interactuan con el sistema y que poseen preocupaciones/concerns de \'este, así como los atributos de calidad deseables que el sistema debe garantizar.
-			\item Capturar la esencia de la arquitectura a trav\'es de una colecci\'on de sistemas similares, por medio del reuso arquitect\'onico
-			\item Ayuda: 1) a los implementores o desarrolladores del software, a entender los trade-off cuando se diseñan nuevos sistemas, 2) a los mantenedores de estos sistemas a entender el c\'odigo legacy usado.
-			\item Comparar las diferencias en decisiones de diseño y poder entender los cambios realizados a lo largo del Desarrollo de un sistema.
-			\item Mirada hol\'istica del Sistema.
+			\item<1> Especifica la decomposici\'on del sistema en subsistemas, las interacciones entre estas partes y la distribuci\'on de funcionalidad entre ellas. 
+			\item<1> Captura la esencia de la arquitectura a trav\'es de una colecci\'on de sistemas similares, por medio del reuso arquitect\'onico.
+			\item<1> Actualmente no hay un consenso de cómo definir una AR, lo que debería contener y cómo debería de construirse. En este trabajo usaremos patrones arquitecturales para su construcción.
+			\item<2> Describe los Stakeholders que interactuan con el sistema y que poseen preocupaciones/concerns de \'este, así como los atributos de calidad deseables que el sistema debe garantizar.
+			\item<2> Ayuda: 1) a los implementores o desarrolladores del software, a entender los trade-off cuando se diseñan nuevos sistemas, 2) a los mantenedores de estos sistemas a entender el c\'odigo legacy usado.
+			\item<2> Comparar las diferencias en decisiones de diseño y poder entender los cambios realizados a lo largo del Desarrollo de un sistema.
+			\item<3> Mirada hol\'istica del Sistema.
 		\end{itemize}
-	\begin{block}{Desventajas}
+	\begin{block}<4>{Desventajas}
 		Incluso realizar los casos de uso más importantes del sistema toma tiempo.
 	\end{block}
 \end{frame}
@@ -174,16 +175,16 @@ el usuario del sistema.
 \begin{frame}
 	\frametitle{Arquitectura de Referencia de Seguridad (ARS) para el browser}
 	\begin{itemize}
-		\item Abtracción de los mecanismos de defensa en forma de patrones de seguridad
-		\item Se enseña en que lugares de la Arquitectura de Referencia son necesitados.
-		\item Una forma de entender y descomponener un sistema complejo con mecanismos de defensa que aumentan esa complejidad.
-		\item Una vista holística de la seguridad, teniendo en cuenta las interacciones con otros sistemas que pueden generar vulnerabilidades.
-		\item Unifica la terminología. Esto permite comparar diferentes implementaciones bajo las mismas definiciones de conceptos.
-		\item Evaluación de la seguridad del browser
-		\item Selección de un browser basado en los requerimientos de seguridad.
-		\item Referencia para funciones de monitoreo y forense.
+		\item<1> Abtracción de los mecanismos de defensa en forma de patrones de seguridad
+		\item<1> Se enseña en que lugares de la Arquitectura de Referencia son necesitados.
+		\item<1> Una forma de entender y descomponener un sistema complejo con mecanismos de defensa que aumentan esa complejidad.
+		\item<2> Una vista holística de la seguridad, teniendo en cuenta las interacciones con otros sistemas que pueden generar vulnerabilidades.
+		\item<2> Unifica la terminología. Esto permite comparar diferentes implementaciones bajo las mismas definiciones de conceptos.
+		\item<2> Evaluación de la seguridad del browser
+		\item<3> Selección de un browser basado en los requerimientos de seguridad.
+		\item<3> Referencia para funciones de monitoreo y forense.
 	\end{itemize}
-	\begin{block}{Desventajas}
+	\begin{block}<4>{Desventajas}
 		\begin{itemize}
 			\item Se necesita invertir mucho tiempo en la construcción, al menos de los componenentes más importantes.
 		\end{itemize}
@@ -206,7 +207,13 @@ el usuario del sistema.
 	\frametitle{Estado del Arte}
 	\begin{itemize}
 		\item No se encontr\'o informaci\'on actualizada sobre una Arquitectura de Referencia del Browser. Hay una \cite{preprint-grosskurth-browser-archevol}, pero es muy antigua.
-		\item Trabajos encontrados: Larrondo et al. \cite{535061}, Grosskurth et al. \cite{2005-grosskurth-browser-refarch,preprint-grosskurth-browser-archevol}, Godfrey et al. \cite{Godfrey2000}, Lwin \cite{Lwin2009}.
+		\item Trabajos encontrados: 
+		\begin{itemize}
+			\item<1-> Larrondo et al. \cite{535061}: análisis del web browser, con el fin de obtener un Modelo de Dominio, un Modelo de Objetos y un Feature Tree que describiera la estructura y funcionalidad entregada comúnmente por los Web Browser.
+			\item<2-> Grosskurth et al. \cite{2005-grosskurth-browser-refarch,preprint-grosskurth-browser-archevol}: utiliza una herramienta de ingeniería inversa, para obtener una arquitectura de referencia de muy alto nivel en base a dos navegadores open-source: Mozilla y Konqueror.
+			\item<3-> Godfrey et al. \cite{Godfrey2000}: se extrajo la arquitectura de software del Navegador Mozilla, con el objetivo de entender la estructuración de sus componentes; además de crear vistas arquitecturales de alto nivel del sistema.
+			\item<4-> Lwin \cite{Lwin2009}]: propone un Browser llamado Anfel SOFT, donde gracias al uso de Inteligencia Artificial, crea agentes que permiten mejorar la experiencia del usuario.
+		\end{itemize}
 		\item Poca documentaci\'on y no hay conceptos unificados.
 		\item Queda por buscar si existe algo parecido a una Arquitectura de Referencia de Seguridad del Browser.
 	\end{itemize}
@@ -226,7 +233,7 @@ el usuario del sistema.
 		\end{itemize}
 		\end{small}
 	\end{block}
-	\begin{block}{Objetivos Espec\'ificos}
+	\begin{block}<2->{Objetivos Espec\'ificos}
 		\begin{small}
 			\begin{itemize}
 				\item Una gu\'ia para comunicar los conceptos relevantes que pudieran afectar la relaci\'on existente entre un desarrollo de software y el navegador. 
@@ -258,10 +265,10 @@ el usuario del sistema.
 \begin{frame}
 	\frametitle{Formas de Validación}	
 	\begin{itemize}
-	\item Las Arquitecturas de Referencias (AR/RA) y Arquitecturas de Referencias de Seguridad (ARS/SRA) no son implementables. Éstos son modelos abstractos y no pueden ser evaluados con respecto a la seguridad o desempeño por medio de testing o experimentación.
-	\item La validación de los artefactos generados en este trabajo será a través de la revisión realizada por expertos en el área de computer science y patrones, por medio de la asistencia de conferencias. 
-	\item Al ser aceptados, presentados, mejorados y publicados en conferencias *PLoP, tendremos un respaldo de la utilidad de estos patrones. Los patrones antes de ser publicados, son refinados a través del proceso llamado ``Shepherding". Para esta tesis se espera ir a las conferencias: AsianPLoP y EuroPLoP.
-	\item Se utilizarán conocimientos en ingeniería de software experimental para probar nuestra hipótesis. 
+	\item<1-> Las Arquitecturas de Referencias (AR/RA) y Arquitecturas de Referencias de Seguridad (ARS/SRA) no son implementables. Éstos son modelos abstractos y no pueden ser evaluados con respecto a la seguridad o desempeño por medio de testing o experimentación.
+	\item<1-> La validación de los artefactos generados en este trabajo será a través de la revisión realizada por expertos en el área de computer science y patrones, por medio de la asistencia de conferencias. 
+	\item<2-> Al ser aceptados, presentados, mejorados y publicados en conferencias *PLoP, tendremos un respaldo de la utilidad de estos patrones. Los patrones antes de ser publicados, son refinados a través del proceso llamado ``Shepherding". Para esta tesis se espera ir a las conferencias: AsianPLoP y EuroPLoP.
+	\item<2-> Se utilizarán conocimientos en ingeniería de software experimental para probar nuestra hipótesis. 
 	\end{itemize}
 \end{frame}
 
@@ -296,9 +303,9 @@ el usuario del sistema.
         \hline
         Agregar nuevos patrones y adecuar modelo & Enero - Abril 2016\\
         \hline
-        Producir segunda versión de publicaciones & Enero - Mayo 2016\\
+        Producir segunda versión de publicaciones & Enero - Abril 2016\\
         \hline
-        Documentar la tesis & Enero - Mayo 2016\\        
+        Documentar la tesis & Enero - Abril 2016\\        
         \hline
         \end{tabular}
         \caption{Plan de Trabajo}
