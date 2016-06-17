@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: refTodas.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Yason
+Warning--empty year in Yason
+Warning--empty booktitle in 2005-grosskurth-browser-refarch
+Warning--empty booktitle in WhyteHarrison
+Warning--empty year in WhyteHarrison
+Warning--empty journal in Galster2011a
+Warning--empty journal in RFC-5246
+Warning--empty year in RFC-5246
+Warning--empty journal in Singh2014
+Warning--empty journal in Saini2014
+Warning--empty journal in Submitted2014
+Warning--empty journal in Hashizume2014Reference
+Warning--empty journal in Fernandez2006
+Warning--empty journal in alkazimi2014
+Warning--empty journal in encinamisuse
+Warning--empty journal in Labs2013
+Warning--empty journal in browSecPhish
+Warning--empty journal in rowSecSEMBlock
+Warning--empty journal in SOPIEFT
+Warning--empty year in SOPIEFT
+Warning--empty journal in Vrbanec2013
+
+Done.
+You've used 100 entries,
+            4039 wiz_defined-function locations,
+            1323 strings with 22838 characters,
+and the built_in function-call counts, 49598 in all, are:
+= -- 3787
+> -- 999
+< -- 238
++ -- 524
+- -- 186
+* -- 2191
+:= -- 8013
+add.period$ -- 210
+call.type$ -- 100
+change.case$ -- 101
+chr.to.int$ -- 549
+cite$ -- 121
+duplicate$ -- 3972
+empty$ -- 4540
+format.name$ -- 237
+if$ -- 11078
+int.to.chr$ -- 0
+int.to.str$ -- 100
+missing$ -- 764
+newline$ -- 429
+num.names$ -- 80
+pop$ -- 2233
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 3794
+stack$ -- 0
+substring$ -- 1384
+swap$ -- 2576
+text.length$ -- 55
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 100
+warning$ -- 21
+while$ -- 183
+width$ -- 103
+write$ -- 922
+(There were 21 warnings)

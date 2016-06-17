@@ -1,0 +1,21 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Context}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Motivation}{5}{0}{1}
+\beamer@sectionintoc {2}{Problem}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{Threats and Vulnerabilities}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{Problems}{10}{0}{2}
+\beamer@sectionintoc {3}{Theoretical Framework}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Reference Architecture (RA)}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Security Reference Architecture (SRA)}{14}{0}{3}
+\beamer@subsectionintoc {3}{3}{Securing a RA}{16}{0}{3}
+\beamer@subsectionintoc {3}{4}{RA and SRA}{22}{0}{3}
+\beamer@subsectionintoc {3}{5}{Misuse Patterns}{27}{0}{3}
+\beamer@subsectionintoc {3}{6}{State of Art}{29}{0}{3}
+\beamer@sectionintoc {4}{Proposal}{34}{0}{4}
+\beamer@subsectionintoc {4}{1}{General and specific objectives/goals}{34}{0}{4}
+\beamer@subsectionintoc {4}{2}{Hypotesis}{37}{0}{4}
+\beamer@subsectionintoc {4}{3}{Validation}{38}{0}{4}
+\beamer@subsectionintoc {4}{4}{Work already done}{40}{0}{4}
+\beamer@sectionintoc {5}{Side work}{44}{0}{5}
