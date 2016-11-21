@@ -1,0 +1,14 @@
+Actors:
+- Browser User
+- Provider
+- Browser's Host 
+
+Misuses:
+
+- Misuse of core browser components -> ends up with Bypassing SOP
+- Execution of untrusted code
+- Polling (no need to bypass sop)
+- Misusing th WB to attack Web Applications -> intranet
+
+
+Use Case:

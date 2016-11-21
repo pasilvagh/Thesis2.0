@@ -1,0 +1,81 @@
+http://resources.infosecinstitute.com/bypassing-same-origin-policy-sop/
+
+
+“The same-origin policy is the most important mechanism we have to keep
+hostile web applications at bay, but it’s also an imperfect one.” —
+Zalewski
+
+
+
+
+
+
+The Browser Hacker's Handbook
+
+- Whether or not you can consciously know it, every time you use a broser, you are trusting a team of people you have probably never met (and likely never will) to protect your important information from the attackers on the Internet.
+
+
+- The web browser has a ever-increasing uses and preents different hcking and security challenges depending on the context of use.
+
+
+- No solamente es posible afectar el mismo browser, si no el host mismo y aquellos de una misma intranet.
+
+
+
+-0-0-0-0-0-0-0-0-0-0-
+
+https://code.google.com/archive/p/browsersec/wikis/Part2.wiki
+
+
+---------
+
+Causa de XSS, en parte por polítias laxas al renderinzar
+
+Cross-site scripting and same-origin policies
+
+Same-origin policies are generally perceived as one of most significant bottlenecks associated with contemporary web browsers. To application developers, the policies are too strict and inflexible, serving as a major annoyance and stifling innovation; the developers push for solutions such as cross-domain XMLHttpRequest or crossdomain.xml in order to be able to build and seamlessly integrate modern applications that span multiple domains and data feeds. To security engineers, on the other hand, these very same policies are too loose, putting user data at undue risk in case of minor and in practice nearly unavoidable programming errors.
+
+The security concern traces back to the fact that the structure of HTML as such, and the practice for rendering engines to implement very lax and poorly documented parsing of legacy HTML features, including extensive and incompatible error recovery attempts, makes it difficult for web site developers to render user-controlled information without falling prey to HTML and script injection flaws. A number of poorly designed, browser-side content sniffing and character set strategies (discussed later in this document), further contributes to the problem by making it likely for non-HTML content to be misinterpreted and rendered as HTML anyway.
+
+Because of this, nearly every major web service routinely suffers from numerous HTML injection flaws; xssed.com, an external site dedicated to tracking publicly reported issues of this type, amassed over 50,000 entries in under two years - and some of the persistent (server-stored) kind turn out to be rather devastating.
+
+The problem clearly demonstrates the inadequateness of same-origin policies as statically bound to a single domain: not all content shown on a particular site should or may be trusted the same, and permitted to do the same. The ability to either isolate, or restrict privileges for portions of data that currently enjoy unconstrained same-origin privileges, would mitigate the impact of HTML parsing problems and developer errors, and also enable new types of applications to be securely built, and is the focus of many experimental security mechanisms proposed for future browsers
+
+-----
+
+Origin headers
+
+Adam Barth, Collin Jackson, and other researchers propose the introduction of reliable Origin headers as an answer to the risk of cross-site request forgery - giving sites the ability to reliably and easily decide whether a particular request permitted across domains comes from a trusted party or not.
+
+In theory, an existing Referer HTTP header could be used for the same purpose, but many users install tweaks to suppress it for privacy reasons; the header may also be dropped on certain page transitions, and was not generally designed to be reliable. Origin proposals attempt to limit the risk of the header being disabled by limiting the amount of data being sent across domains (host name, but no full URL; though arguably, it may still easily disclose undesirable information); and limiting the types of requests on which the header is provided (although this may undermine some of the security benefits associated with the solution).
+
+
+-----
+
+Mozilla content security policies
+
+Brandon Sterne of Mozilla proposes content security policies (specification), a mechanism that would permit site owners to define a list of valid target domains for <IMG>, <EMBED>, <APPLET>, <SCRIPT>, <IFRAME>, and similar resources appearing in their content; and to disallow inline code from being used directly on a page.
+
+The security benefit of these features is limited primarily to cross-site scripting prevention and webmaster policy enforcement; the proposal originally also incorporated the ability to define a list of valid origins for incoming requests as a method to mitigate cross-site request forgery attacks - but this part of the design got dropped in favor of more flexible and simpler Origin headers.
+
+------
+
+Open browser engineering issues
+
+Other than the general design of HTTP, HTML, and related mechanisms discussed previously, a handful of browser engineering decisions tends to contribute to a disproportional number of day-to-day security issues. Understanding these properties is sometimes important for properly assessing the likelihood and maximum impact of security breaches, and hence determining the safety of user data. Some of the pivotal, open-ended issues include:
+
+Relatively unsafe core programming languages: C++ is used for a majority of code in Internet Explorer, Firefox, Safari, Opera, and Chrome; C is used in certain high-performance or low-level areas, such as image manipulation libraries. The choice of C and C++ means that browsers are regularly plagued by memory management and integer overflow problems, despite considerable ongoing audit efforts.
+
+No security compartmentalization: once control of the process is seized due to common implementation flaws, most browsers provide essentially unconstrained access to the user context they are running in. This means that browser bugs - historically, very common - easily lead to total system integrity loss.There are three exceptions: Chrome uses a http://dev.chromium.org/developers/design-documents/sandbox'>security sandbox to contain the renderer (which includes WebKit and V8, hence constituting one of the largest and most complicated bodies of code in the project). Access to system functions and browser-managed data is heavily constrained, and individual tabs are generally run in separate processes, with some exceptions for new tabs spawned in response to document navigation. Android, on the other hand, runs the browser in a dedicated user account, and then restricts the ability for this context to execute any undesirable actions in the system. Likewise, Internet Explorer 7, when running on Windows Vista, is running with reduced privileges as a whole (http://msdn.microsoft.com/en-us/library/bb250462.aspx'>reference)..
+
+Web technologies are used in browser chrome: JavaScript, HTML, and XML are all used to a varying degree to implement some browser internals and various diagnostic and error pages in most browsers. This choice contributes to an elevated risk of HTML injection flaws that permit web content to gain elevated chrome privileges, which - depending on the browser - may carry the permission to read or write files, access arbitrary sites on the Internet, or alter browser settings. The problem is particularly pronounced for Firefox, which implements much of its user interface in this manner.
+
+Inconsistent and overly complex security UIs: a vast majority of browsers employ highly inconsistent UI elements and security messaging, including several styles of modal prompts, interstitials, icons, color codes, and messages that pop up either on the bottom or on the top of the document window. Usability studies consistently show that at least some of these features are easily mis-identified, misunderstood, or trivial to spoof (this is particularly the case for interstitials and notification bars that are not anchored in browser UI). Although a gradual improvement may be observed in certain aspects, further coordinated work in this area seems to be necessary; timing attack issues are a particularly interesting problem to deal with.
+
+Ad hoc plugin security models: every plugin enforces its own variant of the same-origin policy and HTTP stack security checks, often with subtle variations from the browser implementation, and with a relatively poor track record. There is no compelling reason why these checks should not be managed centrally in browser code, other than the absence of well-documented APIs. This situation leads to frequent plugin security model issues, and make web application development more challenging than needs to be.
+
+Inconsistent and haphazard data storage practices: browsers use a mix of random storage methods to keep temporary files, downloads, configuration data, and sensitive records such as passwords, browsing history, saved cookies, or cache entries. These methods include system registry, database container files, drop-off directories, text-based configs (CSV, INI, tab-delimited, XML), and proprietary binary files. The data may be stored in user home directories, system-wide temporary directories, or global program installation folders. Controlling the permissions on all these resources and manipulating them securely is relatively difficult, contributing to many problems, particularly in multi-user systems, or when multiple browsers are used by the same user.
+
+General susceptibility to denial-of-service attacks: as discussed in the section on JavaScript execution restrictions, browsers are generally vulnerable to resource exhaustion or UI blocking attacks that may crash or render the browser - or even the underlying operating system - unresponsive or difficult to interact with. In some cases, this may be even abused to extort certain UI actions from less experienced users. Even with JavaScript out of the picture, tasks such as parsing XML or HTML documents, or rendering certain types of images or videos, are often sufficiently computationally expensive to facilitate such attacks.
+
+Incompatibility with untrusted networks: browsers will persistently cache resources retrieved over untrusted networks, such as public wifi - and will grant such content full access to previously cached pages or credentials. This problem makes it virtually impossible to use public wireless hotspots safely.
